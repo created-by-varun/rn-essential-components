@@ -1,0 +1,22 @@
+{
+  "name": "react-native-essential-components-example",
+  "displayName": "EssentialComponents Example",
+  "expo": {
+    "name": "react-native-essential-components-example",
+    "slug": "react-native-essential-components-example",
+    "description": "Example app for react-native-essential-components",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
