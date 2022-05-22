@@ -1,31 +1,21 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-essential-components';
+import { Column, Row, SafeColumn } from 'react-native-essential-components';
 
 export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
 
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <SafeColumn>
+      <Row>
+        <Text>Result: {result}</Text>
+        <Text>Result: {result}</Text>
+      </Row>
+      <Column>
+        <Text>Result: {result}</Text>
+        <Text>Result: {result}</Text>
+      </Column>
+    </SafeColumn>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
-});
